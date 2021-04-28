@@ -1,0 +1,180 @@
+/********** MAIN  ***********/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+  font-family: "Barlow";
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  color:rgb(65, 67, 68);
+}
+
+.container {
+  background-image: url(images/leaf-pattern-large.jpeg);
+  background-color: #F7F9FC;
+  padding: 5%;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column{
+    flex-direction: column;
+}
+
+
+.card {
+
+  margin-bottom: 3%;
+  padding: 3%;
+  width: 60%;
+  box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  gap: 30px;
+}
+
+/*$$$$$$$$$ Partie 1 $$$$$$$*/
+img {
+  object-fit: cover;
+  object-position: 50% 40%;
+  width:150px;
+  height: 270px;
+  margin: 10px 0px 10px 0px;
+  box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+  border-radius: 4px;
+}
+
+.description {
+  gap: 6%;
+  width: 75%;
+}
+
+
+h2 {
+  margin-bottom: 15px;
+}
+
+.lien_bouton {color: white}
+
+/*$$$$$ BOUTON  $$$$$$$*/
+
+.btn {
+  gap: 10%;
+  cursor: pointer;
+  padding: 15px 10px 15px 10px ;
+  border-radius: 4px;
+  background-color: rgb(3, 102, 75);
+  color: white;
+  letter-spacing: 0.15em;
+  margin: 40px 0px 10px 0px;
+  width: 60%;
+}
+
+.btn img {
+  width: 10px;
+  height: 10px;
+}
+
+.btn:hover {
+  color:rgb(228, 241, 237);
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+
+/********* FONT  ********/
+h1, h2, h3, a {
+  font-family: "Raleway";
+  color: rgb(3, 102, 75);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color:rgb(5, 170, 110)
+}
+
+
+/********** List **********/
+
+ul {
+  gap: 10%;
+  list-style-type: none;
+}
+
+.ul {
+  width: 50%;
+}
+
+i { font-size: 50px;  }
+
+/************ ROLLING MENU  ***************/
+
+.rolling-menu {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    overflow: hidden;
+
+   }
+
+.rolling-menu > :first-child {
+  color: white;
+  display: inline-block; /* modèle de boîte en ligne */
+  padding-right: 2em; /* un peu d'espace pour la transition*/
+  padding-left: 100%;
+  white-space: nowrap; /* / pas de passage à la ligne / */
+  animation: defilement-rtl 15s infinite linear;}
+
+  @keyframes defilement-rtl
+    { 0% { transform: translate3d(0,0,0); } /* / position initiale à droite /      */
+    100% { transform: translate3d(-100%,0,0); }  /*/ position finale à gauche */
+    }
+
+ .hashtagDefile:after {
+	content:attr(data-text);
+	position:absolute;
+	white-space:nowrap;
+	padding-left:10px;
+}
+
+
+/*$$$$$$$$$$$$$ Media Queries  $$$$$$$$$$$$$*/
+
+@media (max-width: 1040px) {
+  .description {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
